@@ -1,0 +1,32 @@
+大车CAN连接：
+使能
+sudo modprobe gs_usb
+连接
+sudo ip link set can0 up type can bitrate 500000
+监听
+candump can0
+
+N100查看：
+ls -l /dev | grep ttyCH
+
+地图配置：
+打开一个终端，执行
+ros2 run nav2_map_server map_server --ros-args --param yaml_filename:=parking_map.yaml
+新开一个终端，执行
+ros2 lifecycle set /map_server configure
+ros2 lifecycle set /map_server activate
+
+网络服务：
+sudo systemctl restart NetworkManager
+
+
+1、打开终端执行命令 
+sudo rmmod cdc-acm
+2、“driver”文件夹				
+make
+3、
+sudo make load
+4、
+sudo make install
+5、查看	
+ls -l /dev | grep ttyCH

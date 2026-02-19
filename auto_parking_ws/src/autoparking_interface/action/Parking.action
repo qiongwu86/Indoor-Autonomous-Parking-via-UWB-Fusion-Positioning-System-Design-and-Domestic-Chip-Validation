@@ -1,0 +1,11 @@
+# 定义动作的目标，包含：泊车的开始指令
+bool start_parking
+---
+# 定义动作的结果，表示是否成功执行
+bool success
+---
+# 定义动作的反馈，包含：
+# 1、geometry_msgs.msg中的Pose2D
+geometry_msgs/Pose2D current_pose
+# 2、geometry_msgs.msg中的Twist
+geometry_msgs/Twist current_velocity

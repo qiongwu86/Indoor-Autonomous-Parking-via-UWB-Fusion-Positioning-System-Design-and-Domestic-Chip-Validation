@@ -1,0 +1,5 @@
+bool on_parking         # 是否泊车
+int16 parking_id_hope   # 本车期望的泊车位置
+---
+bool success            # 是否设置成功
+

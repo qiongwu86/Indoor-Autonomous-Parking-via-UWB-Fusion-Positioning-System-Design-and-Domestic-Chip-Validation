@@ -1,0 +1,12 @@
+# 汽车注册接口
+string car_name                                 # 汽车名称 用于发布坐标 可以用车牌代替
+builtin_interfaces/Time start_time              # 汽车的入场时间
+geometry_msgs/Pose2D initial_pose               # 汽车的初始位姿
+int16 uwb_id                                   # 本车的uwb标签id
+int16 parking_id_hope                           # 本车期望的泊车位置
+---
+nav_2d_msgs/Path2D path                         # 预期的寻车路径
+nav_2d_msgs/Path2D park_path                    # 预期的泊车路径
+int16 car_id                                    # 汽车在停车场中的id
+int16 parking_id                                # 所选择的车位id
+string command                                  # 指令
